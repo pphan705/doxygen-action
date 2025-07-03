@@ -8,6 +8,7 @@
 
 if [ ! -d $2 ]; then
   echo "Current directory: $(pwd)"
+  echo "List: $(ls)"
   echo "Path $2 could not be found!"
   
   exit 1
@@ -16,6 +17,7 @@ cd $2
 
 if [ ! -f $1 ]; then
   echo "Current directory: $(pwd)"
+  echo "List: $(ls)"
   echo "File $1 could not be found!"
   exit 1
 fi
