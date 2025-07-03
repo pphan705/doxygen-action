@@ -7,7 +7,7 @@
 # $4 is a string with extra alpine packages to be installed (i.e. font-fira-code)
 
 if [ ! -d $2 ]; then
-  pwd
+  echo "Current directory: $(pwd)"
   echo "Path $2 could not be found!"
   
   exit 1
@@ -15,7 +15,7 @@ fi
 cd $2
 
 if [ ! -f $1 ]; then
-  pwd
+  echo "Current directory: $(pwd)"
   echo "File $1 could not be found!"
   exit 1
 fi
