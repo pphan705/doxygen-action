@@ -49,3 +49,5 @@ if [ "$BUILD_LATEX" = true ] ; then
   make
 fi
 echo "After: $(ls -la)"
+
+echo "Git Status: $(git status)"
