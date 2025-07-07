@@ -37,8 +37,6 @@ if [ "$BUILD_LATEX" = true ] ; then
 fi
 apk add $PACKAGES
 
-echo "::notice::You're on the bleeding edge of doxygen-action. To pin this version use: mattnotmitt/doxygen-action@$(doxygen --version)"
-
 echo "Before: $(ls -la)"
 # run "regular" doxygen
 doxygen $1
@@ -49,5 +47,3 @@ if [ "$BUILD_LATEX" = true ] ; then
   make
 fi
 echo "After: $(ls -la)"
-
-echo "Git Status: $(git status)"
