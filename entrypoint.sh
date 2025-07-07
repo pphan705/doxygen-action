@@ -39,6 +39,7 @@ apk add $PACKAGES
 
 echo "::notice::You're on the bleeding edge of doxygen-action. To pin this version use: mattnotmitt/doxygen-action@$(doxygen --version)"
 
+echo "Before: $(ls -la)"
 # run "regular" doxygen
 doxygen $1
 
@@ -47,3 +48,4 @@ if [ "$BUILD_LATEX" = true ] ; then
   cd $LATEX_DIR
   make
 fi
+echo "After: $(ls -la)"
